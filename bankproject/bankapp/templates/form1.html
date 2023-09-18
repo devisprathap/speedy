@@ -1,0 +1,166 @@
+
+
+
+
+
+{% load static %}
+
+
+
+FORM
+
+<br>
+<html>
+<head>
+<title>
+
+
+</title>
+</head>
+<body bgcolor="Lightskyblue">
+<br>
+<br>
+<link href="{% static 'css/f.css' %}" rel="stylesheet">
+
+
+<form action="form1" method="Post">
+
+
+
+  {% csrf_token %}
+<label> Name </label>
+<input type="text" name="name" required=""   oninvalid="this.setCustomValidity('this field is required')"  > <br> <br>
+
+
+<!--<label>-->
+<!--Course :-->
+<!--</label>-->
+<!--<select>-->
+<!--<option value="Course">Course</option>-->
+<!--<option value="BCA">BCA</option>-->
+<!--<option value="BBA">BBA</option>-->
+<!--<option value="B.Tech">B.Tech</option>-->
+<!--<option value="MBA">MBA</option>-->
+<!--<option value="MCA">MCA</option>-->
+<!--<option value="M.Tech">M.Tech</option>-->
+<!--</select>-->
+
+<!--<br>-->
+<!--<br>-->
+     AGE:<input type="number" name="age" placeholder="Enter your age" required=""   oninvalid="this.setCustomValidity('this field is required')"><br>
+<br>
+    <label>
+Gender :
+</label><br>
+<input type="radio" name="gender"> Male <br>
+<input type="radio" name="gender"> Female <br>
+<input type="radio" name="gender"> Other
+<br>
+<br>
+
+<label>
+Phone :
+</label>
+
+<input type="number" name="phone" required=""   oninvalid="this.setCustomValidity('this field is required')"> <br> <br>
+Address
+<br>
+<textarea cols="80" rows="5" value="address" required=""   oninvalid="this.setCustomValidity('this field is required')">
+</textarea>
+<br> <br>
+Email:
+<input type="email" id="email" name="email" required=""   oninvalid="this.setCustomValidity('this field is required')"> <br>
+<br> <br>
+<!--Password:-->
+<!--<input type="Password" id="password" name="password" > <br>-->
+<!--<br> <br>-->
+<!--Re-type password:-->
+<!--<input type="Password" id="password1" name="password1" > <br> <br>-->
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+var stateObject = {
+"ERNAKULAM": {
+"Kochi": [],
+"Angamaly": [],
+"Vyttila":[],
+"Kakkanad":[],
+},
+"TRIVANDRUM": {
+"Pattom": [],
+"Thambanoor": [],
+"Venjaramood":[],
+"Vazhuthakkad":[],
+
+}, "KOTTAYAM": {
+"Changanassery": [],
+"Vaikom": [],
+"Puthupally":[],
+"Eattumanoor":[],
+},
+}
+window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+</script>
+</head>
+<body>
+<!--<form name="myform" id="myForm">-->
+Select District: <select name="state" id="countySel" size="1">
+<option value="" selected="selected">Select District</option>
+</select>
+<br>
+<br>
+Select Branch: <select name="countrya" id="stateSel" size="1">
+<option value="" selected="selected">Please select district first</option>
+</select>
+<br>
+<br>
+
+    <option value>Select account type</option>
+    <input type="radio"  name="account" placeholder="savings"><label>savings</label>
+    <input type="radio" name="account"placeholder="current"><label>current</label>
+ <br>
+<br>
+<br>
+    MATERIALS PROVIDED:<br><br>Cheque book <input type="checkbox" name="materialsprovide" placeholder="enter name of materials provided"><br>
+ <br> Credit card<input type="checkbox" name="materialsprovide" placeholder="enter name of materials provided"><br>
+ <br>Debit Card<input type="checkbox" name="materialsprovide" placeholder="enter name of materials provided"><br>
+ <br>
+
+			<br>
+
+    	{% for message in messages %}
+			{{message}}
+			{% endfor %}
+
+
+
+ <input class="btn btn-primary" type="submit">
+
+</body>
+</html></form></form>

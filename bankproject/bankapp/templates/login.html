@@ -1,0 +1,77 @@
+
+{% load static %}
+
+
+
+<div class="container" xmlns="http://www.w3.org/1999/html">
+	<div class="screen">
+		<div class="screen__content">
+                <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+<form action ="login" method="post">
+    {% csrf_token %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+    <input type="text" name="username" placeholder="Enter username">Username<br><br>
+	<br>
+
+    <input type="password" name="password"  placeholder="Enter password">Password<br><br>
+	<br>
+	<br>
+    <input type="submit">
+</form>
+			<br>
+			<br>
+			<br>
+			<br>
+			{% for message in messages %}
+			<h3>	{{message}}</h3>
+			{% endfor %}
+
+<!--			<form class="login">-->
+<!--				<form action="login" method="post">-->
+<!--                          {% csrf_token %}-->
+
+<!--				<div class="login__field">-->
+<!--					<i class="login__icon fas fa-user"></i>-->
+
+
+
+<!--					<input type="text" class="login__input" placeholder="User name / Email">-->
+<!--				</div>-->
+<!--				<div class="login__field">-->
+<!--					<i class="login__icon fas fa-lock"></i>-->
+<!--					<input type="password" class="login__input" placeholder="Password">-->
+<!--				</div>-->
+
+<!--&lt;!&ndash;				<button class="button login__submit">&ndash;&gt;-->
+<!--					<input type="submit">-->
+<!--					<i class="button__icon fas fa-chevron-right"></i>-->
+<!--				</button>-->
+<!--			</form></form></div><a class="btn btn-warning" href="{% url 'bankapp:register' %}"> Register </a><br>-->
+			<br>
+			<br>
+			<br>
+<!--                   <a class="btn btn-danger" href="{% url 'bankapp:logout' %}">Logout       </a>-->
+			<div class="social-login">
+
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+	</div>
+</div></link>
+

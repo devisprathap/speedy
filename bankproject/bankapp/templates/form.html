@@ -1,0 +1,134 @@
+
+
+
+
+
+<!--{% load static %}-->
+<!--<br>-->
+<!--REGISTRATION FORM-->
+
+<!--    <link href="{% static 'css/reg.css' %}" rel="stylesheet">-->
+<!--<form action="form" method="Post">-->
+
+
+
+<!--  {% csrf_token %}-->
+<!-- <br>-->
+<!-- <br>-->
+
+<!-- NAME: <input type="text" name="username"id="validationDefault01"class="form-control" placeholder="Enter your Name"><br>-->
+
+<!-- <br>-->
+<!--   DOB:<input type="date" name="DOB" id="inputdate" class="form-control" placeholder="Enter your dob"><br>-->
+<!-- <br>-->
+<!--    AGE:<input type="number" name="age"id="validationDefault02" placeholder="Enter your age"><br>-->
+<!-- <br>-->
+<!--    GENDER:<input type="radio" name="gender" placeholder="male"><label>male</label><br>-->
+<!-- <br><input type="radio" name="gender" placeholder="female"><label>female</label><br>-->
+<!--    PHONENO:<input type="number" name="phonenumber" placeholder="Enter phonenumber"><br>-->
+<!-- <br>-->
+<!--    ADDRESS:<input type="text" name="address" placeholder="Enter address"><br>-->
+
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--<script>-->
+<!--var stateObject = {-->
+<!--"ERNAKULAM": {-->
+<!--"Kochi": [],-->
+<!--"Angamaly": [],-->
+<!--"Vyttila":[],-->
+<!--"Kakkanad":[],-->
+<!--},-->
+<!--"TRIVANDRUM": {-->
+<!--"Pattom": [],-->
+<!--"Thambanoor": [],-->
+<!--"Venjaramood":[],-->
+<!--"Vazhuthakkad":[],-->
+
+<!--}, "KOTTAYAM": {-->
+<!--"Changanassery": [],-->
+<!--"Vaikom": [],-->
+<!--"Puthupally":[],-->
+<!--"Eattumanoor":[],-->
+<!--},-->
+<!--}-->
+<!--window.onload = function () {-->
+<!--var countySel = document.getElementById("countySel"),-->
+<!--stateSel = document.getElementById("stateSel");-->
+<!--for (var country in stateObject) {-->
+<!--countySel.options[countySel.options.length] = new Option(country, country);-->
+<!--}-->
+<!--countySel.onchange = function () {-->
+<!--stateSel.length = 1; // remove all options bar first-->
+
+<!--if (this.selectedIndex < 1) return; // done-->
+<!--for (var state in stateObject[this.value]) {-->
+<!--stateSel.options[stateSel.options.length] = new Option(state, state);-->
+<!--}-->
+<!--}-->
+<!--countySel.onchange(); // reset in case page is reloaded-->
+<!--stateSel.onchange = function () {-->
+<!--districtSel.length = 1; // remove all options bar first-->
+<!--if (this.selectedIndex < 1) return; // done-->
+<!--var district = stateObject[countySel.value][this.value];-->
+<!--for (var i = 0; i < district.length; i++) {-->
+<!--districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);-->
+<!--}-->
+<!--}-->
+<!--}-->
+<!--</script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form name="myform" id="myForm">-->
+<!--Select District: <select name="state" id="countySel" size="1">-->
+<!--<option value="" selected="selected">Select District</option>-->
+<!--</select>-->
+<!--<br>-->
+<!--<br>-->
+<!--Select Branch: <select name="countrya" id="stateSel" size="1">-->
+<!--<option value="" selected="selected">Please select district first</option>-->
+<!--</select>-->
+<!--<br>-->
+<br>
+
+
+
+
+
+
+<!--    DISTRICT:<input type="text" name="district" placeholder="Enter district"><br>-->
+<!--     <option value selected="selected">select District</option>-->
+<!--    <option value="Ernakulam">Ernakulam</option>-->
+
+<!--    <option value="ANGAMALI">Trivandrum</option>-->
+<!--    <option value="VYTTILA">Kottayam</option>-->
+
+<!-- <br>-->
+<!--    BRANCH:<input type="search" name="branch" placeholder="Enter branch name">-->
+<!--    <option value selected="selected">select Branches</option>-->
+<!--    <option value="KOCHI">KOCHI</option>-->
+
+<!--    <option value="ANGAMALI">ANGAMALI</option>-->
+<!--    <option value="KAKKANAD">KAKKANAD</option>-->
+<!--    <option value="VYTTILA">VYTTILA</option>-->
+
+
+
+<!--    <option value>Select account type</option>-->
+<!--    <input type="radio"  name="account" placeholder="savings"><label>savings</label>-->
+<!--    <input type="radio" name="account"placeholder="current"><label>current</label>-->
+<!-- <br>-->
+<!--    MATERIALS PROVIDED:<br><br>Cheque book <input type="checkbox" name="materialsprovide" placeholder="enter name of materials provided"><br>-->
+<!-- <br> Credit card<input type="checkbox" name="materialsprovide" placeholder="enter name of materials provided"><br>-->
+<!-- <br>Debit Card<input type="checkbox" name="materialsprovide" placeholder="enter name of materials provided"><br>-->
+<!-- <br>-->
+
+<!--    <input class="btn btn-primary" type="submit">-->
+<!--			<br>-->
+
+<!--    	{% for message in messages %}-->
+<!--			{{message}}-->
+<!--{% endfor %}-->
+<!--</form></body></html></form>-->
